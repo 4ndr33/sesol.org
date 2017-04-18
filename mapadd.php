@@ -12,8 +12,8 @@
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<!--<link rel="stylesheet" href="assets/css/bootstrap.css" />-->
-		<link rel="stylesheet" href="assets/css/bootstrap-tokenfield.css" />
-		<link rel="stylesheet" href="assets/css/jquery-ui.css" />
+		<!--<link rel="stylesheet" href="assets/css/bootstrap-tokenfield.css" /> -->
+		<!-- <link rel="stylesheet" href="assets/css/jquery-ui.css" /> -->
 		
 		<link rel="stylesheet" type="text/css" href="assets/css/selectize.css" />
 		<link rel="stylesheet" type="text/css" href="assets/css/selectize.default.css" />
@@ -120,11 +120,11 @@ maxZoom: 18,
 									<div>
 										<div class="row">
 											<div class="6u 12u(mobile)">
-												<input type="text" name="name" id="name" placeholder="Adınız, Soyadınız" />
+												<input type="text" name="name" id="name" placeholder="Adınız, Soyadınız" required />
 												<input type="checkbox" name="anonym_name" value="anonym_name"> sitede adım anonim kalsın
 											</div>
 											<div class="6u 12u(mobile)">
-												<input type="text" name="email" id="email" placeholder="Email adresiniz (zorunlu alan)" />
+												<input type="text" name="email" id="email" placeholder="Email adresiniz (zorunlu alan)" required />
 											</div>
 										</div>
 										<div class="row">
@@ -140,7 +140,7 @@ maxZoom: 18,
 										<div class="row">
 											<div class="6u 12u(mobile)">
 												<input type="text" name="teller_name" id="teller_name" placeholder="Anlatıcı (Kayıttaki sesin sahibi )" />
-												<input type="checkbox" name="anonym_teller_name" value="anonym_teller_name"> sitede adım anonim kalsın
+												<input type="checkbox" name="anonym_teller_name" value="anonym_teller_name"> harita üzerinde anonim kalsın 
 											</div>
 											<div class="6u 12u(mobile)">
 												<select name="record_location" id="record_location" >
@@ -197,38 +197,132 @@ maxZoom: 18,
 												</select>
 												Gün
 											</div>
-											<div class="6u 12u(mobile)">
-												<input type="text" class="form-control" id="tokenfield" value="red,green,blue" />
- 
-											</div>
 										</div>
 										     
-											 
+										
+                                        <div class="row">
+											<div class="12u">
+                                                <div id="divcategory">
+                                                <select name="category" id="category" >
+                                                    
+                                                    <optgroup label="Canlı">
+                                                        <option value="bitki">bitki</option>
+                                                        <option value="hayvan">hayvan</option>
+                                                        <option value="insan">insan</option>
+                                                        <option value="Diğer-belirtiniz">Diğer-belirtiniz</option>
+                                                      </optgroup>
+                                                      <optgroup label="Cansız">
+                                                        
+                                                      </optgroup>
+                                                    <optgroup label="Durum">
+                                                        <option value="azalıyor">azalıyor</option>
+                                                        <option value="artık yok">artık yok</option>
+                                                        <option value="sabit">sabit</option>
+                                                        <option value="çoğalıyor">çoğalıyor</option>
+                                                        <option value="Diğer- belirtiniz">Diğer- belirtiniz</option>
+                                                      </optgroup>
+                                                    
+                                                    <optgroup label="Atmosfer/Jeofiziksel">
+                                                        <option value="dalga">dalga</option>
+                                                        <option value="rüzgar">rüzgar</option>
+                                                        <option value="yağmur">yağmur</option>
+                                                        <option value="kar">kar</option>
+                                                        <option value="Diğer- belirtiniz">Diğer- belirtiniz</option>
+                                                      </optgroup>
+                                                    
+                                                    <optgroup label="Doğal Çevre">
+                                                        <option value="orman">orman</option>
+                                                        <option value="sahil">sahil</option>
+                                                        <option value="deniz">deniz</option>
+                                                        <option value="kayalık">kayalık</option>
+                                                        <option value="tepe">tepe</option>
+                                                        <option value="Diğer, belirtiniz">Diğer, belirtiniz</option>
+                                                        
+                                                      </optgroup>
+                                                    
+                                                    <optgroup label="İnşa edilmiş Çevre/Mekan/Yapı">
+                                                        <option value="sokak">sokak</option>
+                                                        <option value="cadde">cadde</option>
+                                                        <option value="meydan">meydan</option>
+                                                        <option value="iskele">iskele</option>
+                                                        <option value="plaj">plaj</option>
+                                                        
+                                                        <option value="yapı iç sesleri">yapı iç sesleri</option>
+                                                        <option value="Diğer, belirtiniz">Diğer, belirtiniz</option>
+                                                        
+                                                      </optgroup>
+                                                    
+                                                    <optgroup label="Araç">
+                                                        <option value="vapur">vapur</option>
+                                                        <option value="fayton">fayton</option>
+                                                        <option value="bisiklet">bisiklet</option>
+                                                        <option value="minibüs">minibüs</option>
+                                                        <option value="kamyon">kamyon</option>
+                                                        <option value="elektrikli bisiklet">elektrikli bisiklet</option>
+                                                        <option value="ambulans">ambulans</option>
+                                                        <option value="Diğer, belirtiniz">Diğer, belirtiniz</option>
+                                                        
+                                                      </optgroup>
+                                                    
+                                                    <optgroup label="Diğer Mekanik">
+                                                        <option value="Diğer, belirtiniz">Diğer, belirtiniz</option>
+                                                      </optgroup>
+                                                    
+                                                    <optgroup label="Sosyal">
+                                                        <option value="sorun">sorun</option>
+                                                        <option value="çözüm">çözüm</option>
+                                                        <option value="talep">talep</option>
+                                                        <option value="anı">anı</option>
+                                                        <option value="görüşme">görüşme</option>
+                                                        <option value="olay">olay</option>
+                                                        <option value="hayal">hayal</option>
+                                                        <option value="duygu">duygu</option>
+                                                        <option value="diller">diller</option>
+                                                        <option value="dinler">dinler</option>
+                                                        
+                                                        <option value="kültürler">kültürler</option>
+                                                        <option value="Diğer, belirtiniz">Diğer, belirtiniz</option>
+                                                        
+                                                      </optgroup>
+                                                    
+												</select>
+                                                </div>
+												Kayıt Kategorileri 
+                                                
+                                                <br><button id="addnewcategory" type="button">add new category</button>
+											</div>
+										</div>
+                                        
+                                        
+                                        
 										<div class="row">
 											<div class="12u">
-												<input type="text" name="subject" id="subject" placeholder="Başlık" />
+												<input type="text" name="free_tags" id="free_tags" />
+                                                Eklemek istediğiniz İçerik Etiketleri
 											</div>
 										</div>
 										<div class="row">
 											<div class="12u">
-												<input type="text" name="select-to" id="select-to" placeholder="Başlık" />
+												<input type="text" name="subject" id="subject" placeholder="Temsili sesler [vaktiyle o noktada olan bir şeyi temsil etmek için eklenen sesler (nesli tükenmiş bir tür, taş ocakları patlama sesleri); başka kaynaklardan aktarılan ilgili sesler, sanatsal yöntemlerle oluşturulan sesler, yayımlanmış haber sesleri gibi]" />
 											</div>
 										</div>
 										<div class="row">
 											<div class="12u">
-												<input type="file" name="ses" id="file" placeholder="Ses Dosyanız" accept="audio/*" />
+												<input type="file" name="ses" id="file" placeholder="Ses Dosyanız" accept="audio/*" /><br>
+                                                <br>
+                                                <input type="checkbox" name="license_terms" value="license_terms" required> Alıntı-LisansDevam CC BY-SA lisansını kabul ediyorum
 											</div>
 										</div>
 										<div class="row">
 											<div class="12u">
-												<textarea name="message" id="message" placeholder="Etiket; Lütfen etiketlerin araya virgül koyarak ayırın."></textarea>
+												<textarea name="message" id="message" placeholder="Bize Not Bırakın"></textarea>
 											</div>
 										</div>
 										<div class="row 200%">
 											<div class="12u">
 												<ul class="actions">
-													<li><input type="submit" value="Gönder" /></li>
-													<li><input type="reset" value="Formu Temizle" class="alt" /></li>
+													<li><input type="submit" value="GÖNDER" /></li>
+													<li><input id="mailto" type="button" class="alt" onclick="location.href='mailto:info@sesol.org';" value="SORUN BİLDİR"></li>
 												</ul>
 											</div>
 										</div>
@@ -245,16 +339,16 @@ maxZoom: 18,
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script> 
 			<script src="assets/js/jquery.scrolly.min.js"></script> 
-			<script src="assets/js/jquery-ui.js"></script>
+			<!-- <script src="assets/js/jquery-ui.js"></script>-->
 			<script src="assets/js/skel.min.js"></script>
 			<script src="assets/js/skel-viewport.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
-			<script src="assets/js/bootstrap-tokenfield.js"></script>
 			<script src="assets/js/selectize.js"></script>
 			<script>
-			$('#subject').selectize({
+            var Category_Number = 1;
+			$('#free_tags').selectize({
 			delimiter: ',',
 			persist: false,
 			create: function(input) {
@@ -265,77 +359,16 @@ maxZoom: 18,
 				}
 			});
 			
-			var REGEX_EMAIL = '([a-z0-9!#$%&\'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&\'*+/=?^_`{|}~-]+)*@' +
-                  '(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?)';
-
-			$('#select-to').selectize({
-				persist: false,
-				maxItems: null,
-				valueField: 'email',
-				labelField: 'name',
-				searchField: ['name', 'email'],
-				options: [
-					{email: 'brian@thirdroute.com', name: 'Brian Reavis'},
-					{email: 'nikola@tesla.com', name: 'Nikola Tesla'},
-					{email: 'someone@gmail.com'}
-				],
-				render: {
-					item: function(item, escape) {
-						return '<div>' +
-							(item.name ? '<span class="name">' + escape(item.name) + '</span>' : '') +
-							(item.email ? '<span class="email">' + escape(item.email) + '</span>' : '') +
-						'</div>';
-					},
-					option: function(item, escape) {
-						var label = item.name || item.email;
-						var caption = item.name ? item.email : null;
-						return '<div>' +
-							'<span class="label">' + escape(label) + '</span>' +
-							(caption ? '<span class="caption">' + escape(caption) + '</span>' : '') +
-						'</div>';
-					}
-				},
-				createFilter: function(input) {
-					var match, regex;
-
-					// email@address.com
-					regex = new RegExp('^' + REGEX_EMAIL + '$', 'i');
-					match = input.match(regex);
-					if (match) return !this.options.hasOwnProperty(match[0]);
-
-					// name <email@address.com>
-					regex = new RegExp('^([^<]*)\<' + REGEX_EMAIL + '\>$', 'i');
-					match = input.match(regex);
-					if (match) return !this.options.hasOwnProperty(match[2]);
-
-					return false;
-				},
-				create: function(input) {
-					if ((new RegExp('^' + REGEX_EMAIL + '$', 'i')).test(input)) {
-						return {email: input};
-					}
-					var match = input.match(new RegExp('^([^<]*)\<' + REGEX_EMAIL + '\>$', 'i'));
-					if (match) {
-						return {
-							email : match[2],
-							name  : $.trim(match[1])
-						};
-					}
-					alert('Invalid email address.');
-					return false;
-				}
-			});
 
 			$( document ).ready(function() {
-				console.log( "ready!" );
+				//console.log( "ready!" );
 			});
-			$('#tokenfield').tokenfield({
-			  autocomplete: {
-				source: ['red','blue','green','yellow','violet','brown','purple','black','white'],
-				delay: 100
-			  },
-			  showAutocompleteOnFocus: true
-			});
+                
+            $("#addnewcategory").click(function () {
+                Category_Number += 1;
+                //alert('category'+Category_Number);
+                $("#divcategory").append('<select name="category'+Category_Number+'" id="category'+Category_Number+'" ><optgroup label="Canlı">    <option value="bitki">bitki</option>    <option value="hayvan">hayvan</option>    <option value="insan">insan</option>    <option value="Diğer-belirtiniz">Diğer-belirtiniz</option>  </optgroup>  <optgroup label="Cansız">      </optgroup><optgroup label="Durum">    <option value="azalıyor">azalıyor</option>    <option value="artık yok">artık yok</option>    <option value="sabit">sabit</option>    <option value="çoğalıyor">çoğalıyor</option>    <option value="Diğer- belirtiniz">Diğer- belirtiniz</option>  </optgroup><optgroup label="Atmosfer/Jeofiziksel">    <option value="dalga">dalga</option>    <option value="rüzgar">rüzgar</option>    <option value="yağmur">yağmur</option>    <option value="kar">kar</option>    <option value="Diğer- belirtiniz">Diğer- belirtiniz</option>  </optgroup><optgroup label="Doğal Çevre">    <option value="orman">orman</option>    <option value="sahil">sahil</option>    <option value="deniz">deniz</option>    <option value="kayalık">kayalık</option>    <option value="tepe">tepe</option>    <option value="Diğer, belirtiniz">Diğer, belirtiniz</option>      </optgroup><optgroup label="İnşa edilmiş Çevre/Mekan/Yapı">    <option value="sokak">sokak</option>    <option value="cadde">cadde</option>    <option value="meydan">meydan</option>    <option value="iskele">iskele</option>    <option value="plaj">plaj</option>        <option value="yapı iç sesleri">yapı iç sesleri</option>    <option value="Diğer, belirtiniz">Diğer, belirtiniz</option>      </optgroup><optgroup label="Araç">    <option value="vapur">vapur</option>    <option value="fayton">fayton</option>    <option value="bisiklet">bisiklet</option>    <option value="minibüs">minibüs</option>    <option value="kamyon">kamyon</option>    <option value="elektrikli bisiklet">elektrikli bisiklet</option>    <option value="ambulans">ambulans</option>    <option value="Diğer, belirtiniz">Diğer, belirtiniz</option>      </optgroup><optgroup label="Diğer Mekanik">    <option value="Diğer, belirtiniz">Diğer, belirtiniz</option>  </optgroup><optgroup label="Sosyal">    <option value="sorun">sorun</option>    <option value="çözüm">çözüm</option>    <option value="talep">talep</option>    <option value="anı">anı</option>    <option value="görüşme">görüşme</option>    <option value="olay">olay</option>    <option value="hayal">hayal</option>    <option value="duygu">duygu</option>    <option value="diller">diller</option>    <option value="dinler">dinler</option>        <option value="kültürler">kültürler</option>    <option value="Diğer, belirtiniz">Diğer, belirtiniz</option>      </optgroup></select>');
+            });
 			
 			</script>
 	</body>
