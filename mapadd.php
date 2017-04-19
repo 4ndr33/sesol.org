@@ -100,11 +100,25 @@ maxZoom: 18,
 
 			<div class="wrapper style4">
 				<article id="contact" class="container 75%">
-				<header><h4>	<p>Ses y&uuml;kleme alanına hoş geldiniz! Ses eklemek i&ccedil;in işaret imini ses dosyasını y&uuml;kleyeceğiniz noktaya taşıyarak tutturun. Daha sonra haritanın altında beliren formu doldurarak mp3 formatındaki ses dosyanızı sisteme y&uuml;kleyebilirsiniz.</p>
-<p>Y&uuml;klediğiniz sesler i&ccedil;in Alıntı-LisansDevam CC BY-SA lisansını kullanıyoruz. Bilgi i&ccedil;in: <br><a href="https://creativecommons.org/licenses/?lang=tr" target="_blank" style="color: blue"> https://creativecommons.org/licenses/?lang=tr</a></p></h4></header>
+				<header><h4>	
+				
+				<p>Ses yükleme alanına hoş geldiniz! <br>
+
+				Ses eklemek için işaret imini ses dosyasını yükleyeceğiniz noktaya taşıyarak tutturun. Daha sonra mp3 formatındaki ses dosyanızı sisteme yükleyin. Alttaki ses tanımlama formunu doldurarak ses dosyası ekleme işlemini tamamlayabilirsiniz. </a>
+
+				Formdaki kategoriler ve sizin yaratacağınız etiketler harita üzerindeki farklı sesler arasında ilişki kurmamıza yardımcı olacak. Kategori ekle düğmesine basarak pek çok kategori ekleyebilirsiniz. Kendi eklemek istediğiniz tanımlamaları da etiketler kısmına istediğiniz sayıda tek tek girebilirsiniz. Teşekkürler!</a> 
+
+				Kayıt ekleme sırasında sorun yaşarsanız bize info@sesol.org adresinden ulaşabilirsiniz.</a>
+
+				Haritamıza ses kayıtlarınızı yüklediğinizde Alıntı-LisansDevam CC BY-SA lisansını kabul etmiş oluyorsunuz.<br>
+				 Bilgi için:  <a href="https://creativecommons.org/licenses/?lang=tr" target="_blank" style="color: blue">https://creativecommons.org/licenses/?lang=tr</a><br>
+				<a href="https://creativecommons.org/licenses/by-sa/4.0/deed.tr" target="_blank" style="color: blue">https://creativecommons.org/licenses/by-sa/4.0/deed.tr</a><br>
+				<a href="https://creativecommons.org/licenses/by-sa/4.0/legalcode#languages" target="_blank" style="color: blue">https://creativecommons.org/licenses/by-sa/4.0/legalcode#languages</a><br>
+							</p>
+				</h4></header>
 <div class="">
 			
-			
+				<h4>Ses konumunu belirleyin</h4>
 			    <div id="myMap"></div><br/>		
 					
 				
@@ -118,207 +132,417 @@ maxZoom: 18,
 								<input type="hidden" name="map2" id="longitude" />
 								<input type="hidden" name="kampanya" id="kampanya" value="adalara" placeholder="Kampanya" />
 									<div>
+										<br>
 										<div class="row">
-											<div class="6u 12u(mobile)">
-												<input type="text" name="name" id="name" placeholder="Adınız, Soyadınız" required />
-												<input type="checkbox" name="anonym_name" value="anonym_name"> sitede adım anonim kalsın
-											</div>
-											<div class="6u 12u(mobile)">
-												<input type="text" name="email" id="email" placeholder="Email adresiniz (zorunlu alan)" required />
-											</div>
-										</div>
-										<div class="row">
-											<div class="6u 12u(mobile)">
-												<input type="date" name="register_date" name="register_date" placeholder=""><br>
-												Kaydın yapıldığı Tarih
-											</div>
-											<div class="6u 12u(mobile)">
-												<input type="date" name="record_date" id="record_date" placeholder="" /><br>
-												Kayıtta bahsi geçen tarih (kaydın yapıldığı zamandan farklı ise, mesela anı veya olay ise)
-											</div>
-										</div>
-										<div class="row">
-											<div class="6u 12u(mobile)">
-												<input type="text" name="teller_name" id="teller_name" placeholder="Anlatıcı (Kayıttaki sesin sahibi )" />
-												<input type="checkbox" name="anonym_teller_name" value="anonym_teller_name"> harita üzerinde anonim kalsın 
-											</div>
-											<div class="6u 12u(mobile)">
-												<select name="record_location" id="record_location" >
-												  <option value="Kınalıada">Kınalıada</option>
-												  <option value="Burgazadası">Burgazadası</option>
-												  <option value="Heybeliada">Heybeliada</option>
-												  <option value="Büyükada">Büyükada</option>
-												  <option value="Yassıada">Yassıada</option>
-												  <option value="Sivriada">Sivriada</option>
-												  <option value="Tavşanadası">Tavşanadası</option>
-												  <option value="Kaşıkadası">Kaşıkadası</option>
-												  <option value="Marmara Denizi">Marmara Denizi</option>
-												  <option value="Diğer, belirtiniz">Diğer, belirtiniz</option>
-												</select>
-												Kayıt Mekanı (Haritada işaretlediğiniz nokta)
+										<table class="12u">
+										<tr>
+										<th class="3u 12u(mobile)"></th>
+										<th></th>
+										<th></th>
+										</tr>
+										<tr>
+										<td style="padding-bottom:25px;">Ses Dosyasını Yükleyin</td>
+										<td>&nbsp<input type="file" name="ses" id="file" placeholder="Ses Dosyanız" accept="audio/*" /></td>
+										<td></td>
+										</tr>
+										<tr>
+										<td></td>
+										<td style="padding-bottom:25px;">Alıntı-LisansDevam CC BY-SA lisansını kabul ediyorum</td>
+										<td align="center">&nbsp<input type="checkbox" name="license_terms" value="license_terms" required> </td>
+										</tr>
+										<tr>
+										<td style="padding-bottom:25px;">Adınız, Soyadınız</td>
+										<td><input type="text" name="name" id="name" required /></td>
+										<td align="center">sitede adım anonim kalsın<br><input type="checkbox" name="anonym_name" value="anonym_name"></td>
+										</tr>
+										 
+										<tr>
+										<td style="padding-bottom:25px;">Email adresiniz (zorunlu alan)</td>
+										<td><input type="text" name="email" id="email" placeholder="" required /></td>
+										<td align="center">sitede adım anonim kalsın<br><input type="checkbox" name="anonym_name" value="anonym_name"></td>
+										</tr>
+										
+										<tr>
+										<td style="padding-bottom:35px;">Başlık (zorunlu alan)</td>
+										<td><input type="text" name="title" id="title" placeholder="" required /></td>
+										<td align="center"></td>
+										</tr>
+										 
+										<tr>
+										<td style="padding-bottom:25px;">Kaydın yapıldığı Tarih</td>
+										<td><input type="date" name="register_date" name="register_date" placeholder="" style="background: #282828;color: #bbb;"></td>
+										<td align="center"></td>
+										</tr>
 
-											</div>
+										<tr>
+										<td style="padding-bottom:25px;">Kayıtta bahsi geçen tarih (kaydın yapıldığı zamandan farklı ise, mesela anı veya olay ise)</td>
+										<td><input type="date" name="record_date" id="record_date"  style="background: #282828;color: #bbb;" placeholder="" /></td>
+										<td align="center"td>
+										</tr>
+										
+										
+										<tr>
+										<td style="padding-bottom:25px;">Anlatıcı (Kayıttaki sesin sahibi )</td>
+										<td><input type="text" name="teller_name" id="teller_name" placeholder="" /></td>
+										<td align="center">&nbsp harita üzerinde anonim kalsın<br><input type="checkbox" name="anonym_teller_name" value="anonym_teller_name"></td>
+										</tr>
+										
+										
+										<tr>
+										<td style="padding-bottom:25px;">Kayıt Mekanı (Haritada işaretlediğiniz nokta)</td>
+										<td>Kınalıada<br>
+											Burgazadası<br>
+											Heybeliada<br>
+											Büyükada<br>
+											Yassıada<br>
+											Sivriada<br>
+											Tavşanadası<br>
+											Kaşıkadası<br>
+											Marmara Denizi<br>
+											Diğer, belirtiniz <input type="text" name="other_record_location" id="other_record_location" placeholder="" /><br>
+											<br>
+											
+										</td>
+										<td align="center">
+											&nbsp<input type="checkbox" name="record_location" value="Kınalıada"><br>
+											&nbsp<input type="checkbox" name="record_location" value="Burgazadası"><br>
+											&nbsp<input type="checkbox" name="record_location" value="Heybeliada"><br>
+											&nbsp<input type="checkbox" name="record_location" value="Büyükada"><br>
+											
+											&nbsp<input type="checkbox" name="record_location" value="Yassıada"><br>
+											&nbsp<input type="checkbox" name="record_location" value="Sivriada"><br>
+											&nbsp<input type="checkbox" name="record_location" value="Tavşanadası"><br>
+											&nbsp<input type="checkbox" name="record_location" value="Kaşıkadası"><br>
+											
+											&nbsp<input type="checkbox" name="record_location" value="Marmara Denizi"><br>
+											
+											&nbsp<input type="checkbox" name="record_location" value="Diğer, belirtiniz"><br>
+										</td>
+										</tr>
+										
+										
+										<tr>
+										
+										<td style="padding-bottom:25px;">Kayıtta Bahsi Geçen Mekan (Kayıt mekanından farklı ise haritada bu noktayı işaretleyebilirsiniz)</td>
+										<td>Kınalıada<br>
+											Burgazadası<br>
+											Heybeliada<br>
+											Büyükada<br>
+											Yassıada<br>
+											Sivriada<br>
+											Tavşanadası<br>
+											Kaşıkadası<br>
+											Marmara Denizi<br>
+											Diğer, belirtiniz <input type="text" name="other_passing_location" id="other_record_location" placeholder="" /><br>
+											
+											
+										</td>
+										<td align="center">
+											&nbsp<input type="checkbox" name="passing_location" value="Kınalıada"><br>
+											&nbsp<input type="checkbox" name="passing_location" value="Burgazadası"><br>
+											&nbsp<input type="checkbox" name="passing_location" value="Heybeliada"><br>
+											&nbsp<input type="checkbox" name="passing_location" value="Büyükada"><br>
+											
+											&nbsp<input type="checkbox" name="passing_location" value="Yassıada"><br>
+											&nbsp<input type="checkbox" name="passing_location" value="Sivriada"><br>
+											&nbsp<input type="checkbox" name="passing_location" value="Tavşanadası"><br>
+											&nbsp<input type="checkbox" name="passing_location" value="Kaşıkadası"><br>
+											
+											&nbsp<input type="checkbox" name="passing_location" value="Marmara Denizi"><br>
+											
+											&nbsp<input type="checkbox" name="passing_location" value="Diğer, belirtiniz"><br>
+										</td>
+										</tr>
+										
+										
+										<tr>
+										
+										<td style="padding-bottom:25px;">Günün Saati</td>
+										<td>sabah [5-12]<br>
+											öğle [13-17]<br>
+											aksam [18-20]<br>
+											gece [21-24]<br>
+											sabaha karşı [1-4]<br>
+											
+											<br>
+										</td>
+										<td align="center">
+											&nbsp<input type="checkbox" name="time_of_day" value="sabah [5-12]"><br>
+											&nbsp<input type="checkbox" name="time_of_day" value="öğle [13-17]"><br>
+											&nbsp<input type="checkbox" name="time_of_day" value="aksam [18-20]"><br>
+											&nbsp<input type="checkbox" name="time_of_day" value="gece [21-24]"><br>
+											&nbsp<input type="checkbox" name="time_of_day" value="sabaha karşı [1-4]"><br>
+										</td>
+										</tr>
+										
+										<tr>
+										
+										<td style="padding-bottom:25px;">Gün</td>
+										<td>Haftaiçi<br>
+											Haftasonu<br>
+											<br>
+											
+										</td>
+										<td align="center">
+											&nbsp<input type="checkbox" name="day" value="Haftaiçi"><br>
+											&nbsp<input type="checkbox" name="day" value="Haftasonu"><br>
+										</td>
+										</tr>
+										
+										
+										
+										<tr>
+										
+										<td style="padding-bottom:25px;">Kayıt Kategorileri</td>
+										<td>
+											<b style="color:white;">Canlı</b><br>
+											&nbsp bitki<br>
+											&nbsp hayvan<br>
+											&nbsp insan<br>
+											&nbsp Diğer-belirtiniz<input type="text" name="other_passing_location" id="other_category" placeholder="" /><br>
+											
+											
+										</td>
+										<td align="center">
+											<br>
+											&nbsp<input type="checkbox" name="category" value="bitki"><br>
+											&nbsp<input type="checkbox" name="category" value="hayvan"><br>
+											&nbsp<input type="checkbox" name="category" value="insan"><br>
+											&nbsp<input type="checkbox" name="category" value="Diğer-belirtiniz"><br>
+										</td>
+										</tr>
+										
+										<tr>
+										
+										<td style="padding-bottom:25px;"></td>
+										<td>
+											<b style="color:white;">Cansız</b><br>
+											
+											
+										</td>
+										<td align="center">
+											&nbsp<input type="checkbox" name="category" value="Cansız">
+										</td>
+										</tr>
+										
+										
+										
+										<tr>
+										
+										<td style="padding-bottom:25px;"></td>
+										<td>
+											<b style="color:white;">Durum</b><br>
+											&nbsp azalıyor<br>
+											&nbsp artık yok<br>
+											&nbsp sabit<br>
+											&nbsp çoğalıyor<br>
+											&nbsp Diğer-belirtiniz<input type="text" name="other_passing_location" id="other_category" placeholder="" /><br>
+											
+											
+										</td>
+										<td align="center">
+											<br>
+											&nbsp<input type="checkbox" name="category" value="azalıyor"><br>
+											&nbsp<input type="checkbox" name="category" value="artık yok"><br>
+											&nbsp<input type="checkbox" name="category" value="sabit"><br>
+											&nbsp<input type="checkbox" name="category" value="çoğalıyor"><br>
+											&nbsp<input type="checkbox" name="category" value="Diğer-belirtiniz"><br>
+										</td>
+										</tr>
+										
+										
+										<tr>
+										
+										<td style="padding-bottom:25px;"></td>
+										<td>
+											<b style="color:white;">Atmosfer/Jeofiziksel</b><br>
+											&nbsp dalga<br>
+											&nbsp rüzgar<br>
+											&nbsp yağmur<br>
+											&nbsp kar<br>
+											&nbsp Diğer-belirtiniz<input type="text" name="other_passing_location" id="other_category" placeholder="" /><br>
+											
+											
+										</td>
+										<td align="center">
+											<br>
+											&nbsp<input type="checkbox" name="category" value="dalga"><br>
+											&nbsp<input type="checkbox" name="category" value="rüzgar"><br>
+											&nbsp<input type="checkbox" name="category" value="yağmur"><br>
+											&nbsp<input type="checkbox" name="category" value="kar"><br>
+											&nbsp<input type="checkbox" name="category" value="Diğer-belirtiniz"><br>
+										</td>
+										</tr>
+										
+										
+										<tr>
+										
+										<td style="padding-bottom:25px;"></td>
+										<td>
+											<b style="color:white;">Doğal Çevre</b><br>
+											&nbsp orman<br>
+											&nbsp sahil<br>
+											&nbsp deniz<br>
+											&nbsp kayalık<br>
+											&nbsp tepe<br>
+											&nbsp Diğer-belirtiniz<input type="text" name="other_passing_location" id="other_category" placeholder="" /><br>
+											
+											
+										</td>
+										<td align="center">
+											<br>
+											&nbsp<input type="checkbox" name="category" value="orman"><br>
+											&nbsp<input type="checkbox" name="category" value="sahil"><br>
+											&nbsp<input type="checkbox" name="category" value="deniz"><br>
+											&nbsp<input type="checkbox" name="category" value="kayalık"><br>
+											&nbsp<input type="checkbox" name="category" value="tepe"><br>
+											&nbsp<input type="checkbox" name="category" value="Diğer-belirtiniz"><br>
+										</td>
+										</tr>
+										
+										
+										<tr>
+										
+										<td style="padding-bottom:25px;"></td>
+										<td>
+											<b style="color:white;">İnşa edilmiş Çevre/Mekan/Yapı</b><br>
+											&nbsp sokak<br>
+											&nbsp cadde<br>
+											&nbsp meydan<br>
+											&nbsp iskele<br>
+											&nbsp plaj<br>
+											&nbsp yapı iç sesleri<br>
+											&nbsp Diğer-belirtiniz<input type="text" name="other_passing_location" id="other_category" placeholder="" /><br>
+											
+											
+										</td>
+										<td align="center">
+											<br>
+											&nbsp<input type="checkbox" name="category" value="sokak"><br>
+											&nbsp<input type="checkbox" name="category" value="cadde"><br>
+											&nbsp<input type="checkbox" name="category" value="meydan"><br>
+											&nbsp<input type="checkbox" name="category" value="iskele"><br>
+											&nbsp<input type="checkbox" name="category" value="plaj"><br>
+											&nbsp<input type="checkbox" name="category" value="yapı iç sesleri"><br>
+											&nbsp<input type="checkbox" name="category" value="Diğer-belirtiniz"><br>
+										</td>
+										</tr>
+										
+										
+										<tr>
+										
+										<td style="padding-bottom:25px;"></td>
+										<td>
+											<b style="color:white;">Araç</b><br>
+											&nbsp vapur<br>
+											&nbsp fayton<br>
+											&nbsp bisiklet<br>
+											&nbsp minibüs<br>
+											&nbsp kamyon<br>
+											&nbsp elektrikli bisiklet<br>
+											&nbsp ambulans<br>
+											&nbsp Diğer-belirtiniz<input type="text" name="other_passing_location" id="other_category" placeholder="" /><br>
+											
+											
+										</td>
+										<td align="center">
+											<br>
+											&nbsp<input type="checkbox" name="category" value="vapur"><br>
+											&nbsp<input type="checkbox" name="category" value="fayton"><br>
+											&nbsp<input type="checkbox" name="category" value="bisiklet"><br>
+											&nbsp<input type="checkbox" name="category" value="minibüs"><br>
+											&nbsp<input type="checkbox" name="category" value="kamyon"><br>
+											&nbsp<input type="checkbox" name="category" value="elektrikli bisiklet"><br>
+											&nbsp<input type="checkbox" name="category" value="ambulans"><br>
+											&nbsp<input type="checkbox" name="category" value="Diğer-belirtiniz"><br>
+										</td>
+										</tr>
+										
+										<tr>
+										
+										<td style="padding-bottom:25px;"></td>
+										<td>
+											<b style="color:white;">Diğer Mekanik</b><br>
+											
+											&nbsp Diğer-belirtiniz<input type="text" name="other_passing_location" id="other_category" placeholder="" /><br>
+											
+											
+										</td>
+										<td align="center">
+											<br>
+											&nbsp<input type="checkbox" name="category" value="Diğer-belirtiniz"><br>
+										</td>
+										</tr>
+										
+										<tr>
+										
+										<td style="padding-bottom:25px;"></td>
+										<td>
+											<b style="color:white;">Sosyal</b><br>
+											&nbsp sorun<br>
+											&nbsp çözüm<br>
+											&nbsp talep<br>
+											&nbsp anı<br>
+											&nbsp görüşme<br>
+											&nbsp olay<br>
+											&nbsp hayal<br>
+											
+											&nbsp duygu<br>
+											&nbsp diller<br>
+											&nbsp dinler<br>
+											&nbsp kültürler<br>
+											
+											
+											&nbsp Diğer-belirtiniz<input type="text" name="other_passing_location" id="other_category" placeholder="" /><br>
+											
+											
+										</td>
+										<td align="center">
+											<br>
+											&nbsp<input type="checkbox" name="category" value="sorun"><br>
+											&nbsp<input type="checkbox" name="category" value="çözüm"><br>
+											&nbsp<input type="checkbox" name="category" value="talep"><br>
+											&nbsp<input type="checkbox" name="category" value="anı"><br>
+											&nbsp<input type="checkbox" name="category" value="görüşme"><br>
+											&nbsp<input type="checkbox" name="category" value="olay"><br>
+											&nbsp<input type="checkbox" name="category" value="hayal"><br>
+											
+											&nbsp<input type="checkbox" name="category" value="duygu"><br>
+											&nbsp<input type="checkbox" name="category" value="diller"><br>
+											&nbsp<input type="checkbox" name="category" value="dinler"><br>
+											&nbsp<input type="checkbox" name="category" value="kültürler"><br>
+											
+											&nbsp<input type="checkbox" name="category" value="Diğer-belirtiniz"><br>
+										</td>
+										</tr>
+										
+										
+										<tr>
+										<td style="padding-bottom:35px;">Eklemek istediğiniz İçerik Etiketleri</td>
+										<td><input type="text" name="free_tags" id="free_tags" placeholder="" style="background: #282828;color: #bbb;" required /></td>
+										<td align="center"></td>
+										</tr>
+										
+										
+										<tr>
+										<td style="padding-bottom:35px;">Temsili sesler</td>
+										<td><input type="text" name="subject" id="subject" placeholder="" required />
+											vaktiyle o noktada olan bir şeyi temsil etmek için eklenen sesler (nesli tükenmiş bir tür, taş ocakları patlama sesleri); başka kaynaklardan aktarılan ilgili sesler, sanatsal yöntemlerle oluşturulan sesler, yayımlanmış haber sesleri gibi)
+										</td>
+										<td align="center">&nbsp<input type="checkbox" name="subject_check" value="subject_check"></td>
+										</tr>
+										
+										<tr>
+										<td style="padding-bottom:35px;">Bize Not Bırakın</td>
+										<td><textarea rows="3" name="message" id="message" placeholder=""></textarea></td>
+										<td align="center"></td>
+										</tr>
+										
+										</table>
+											
 										</div>
 										
-										<div class="row">
-											<div class="6u 12u(mobile)">
-												<select name="passing_location" id="passing_location" >
-												  <option value="Kınalıada">Kınalıada</option>
-												  <option value="Burgazadası">Burgazadası</option>
-												  <option value="Heybeliada">Heybeliada</option>
-												  <option value="Büyükada">Büyükada</option>
-												  <option value="Yassıada">Yassıada</option>
-												  <option value="Sivriada">Sivriada</option>
-												  <option value="Tavşanadası">Tavşanadası</option>
-												  <option value="Kaşıkadası">Kaşıkadası</option>
-												  <option value="Marmara Denizi">Marmara Denizi</option>
-												  <option value="Diğer, belirtiniz">Diğer, belirtiniz</option>
-												</select>
-												Kayıtta Bahsi Geçen Mekan(Kayıt mekanından farklı ise haritada bu noktayı işaretleyebilirsiniz)
-
-											</div>
-											<div class="6u 12u(mobile)">
-												<select name="time_of_day" id="time_of_day" >
-												  <option value="sabah [5-12]">sabah [5-12]</option>
-												  <option value="öğle [13-17]">öğle [13-17]</option>
-												  <option value="aksam [18-20]">aksam [18-20]</option>
-												  <option value="gece [21-24]">gece [21-24]</option>
-												  <option value="sabaha karşı [1-4]">sabaha karşı [1-4]</option>
-												</select>
-												Günün Saati
- 
-											</div>
-										</div>
-										<div class="row">
-											<div class="6u 12u(mobile)">
-												<select name="day" id="day" >
-												  <option value="Haftaiçi">Haftaiçi</option>
-												  <option value="Haftasonu">Haftasonu</option>
-												</select>
-												Gün
-											</div>
-										</div>
-										     
-										
-                                        <div class="row">
-											<div class="12u">
-                                                <div id="divcategory">
-                                                <select name="category" id="category" >
-                                                    
-                                                    <optgroup label="Canlı">
-                                                        <option value="bitki">bitki</option>
-                                                        <option value="hayvan">hayvan</option>
-                                                        <option value="insan">insan</option>
-                                                        <option value="Diğer-belirtiniz">Diğer-belirtiniz</option>
-                                                      </optgroup>
-                                                      <optgroup label="Cansız">
-                                                        
-                                                      </optgroup>
-                                                    <optgroup label="Durum">
-                                                        <option value="azalıyor">azalıyor</option>
-                                                        <option value="artık yok">artık yok</option>
-                                                        <option value="sabit">sabit</option>
-                                                        <option value="çoğalıyor">çoğalıyor</option>
-                                                        <option value="Diğer- belirtiniz">Diğer- belirtiniz</option>
-                                                      </optgroup>
-                                                    
-                                                    <optgroup label="Atmosfer/Jeofiziksel">
-                                                        <option value="dalga">dalga</option>
-                                                        <option value="rüzgar">rüzgar</option>
-                                                        <option value="yağmur">yağmur</option>
-                                                        <option value="kar">kar</option>
-                                                        <option value="Diğer- belirtiniz">Diğer- belirtiniz</option>
-                                                      </optgroup>
-                                                    
-                                                    <optgroup label="Doğal Çevre">
-                                                        <option value="orman">orman</option>
-                                                        <option value="sahil">sahil</option>
-                                                        <option value="deniz">deniz</option>
-                                                        <option value="kayalık">kayalık</option>
-                                                        <option value="tepe">tepe</option>
-                                                        <option value="Diğer, belirtiniz">Diğer, belirtiniz</option>
-                                                        
-                                                      </optgroup>
-                                                    
-                                                    <optgroup label="İnşa edilmiş Çevre/Mekan/Yapı">
-                                                        <option value="sokak">sokak</option>
-                                                        <option value="cadde">cadde</option>
-                                                        <option value="meydan">meydan</option>
-                                                        <option value="iskele">iskele</option>
-                                                        <option value="plaj">plaj</option>
-                                                        
-                                                        <option value="yapı iç sesleri">yapı iç sesleri</option>
-                                                        <option value="Diğer, belirtiniz">Diğer, belirtiniz</option>
-                                                        
-                                                      </optgroup>
-                                                    
-                                                    <optgroup label="Araç">
-                                                        <option value="vapur">vapur</option>
-                                                        <option value="fayton">fayton</option>
-                                                        <option value="bisiklet">bisiklet</option>
-                                                        <option value="minibüs">minibüs</option>
-                                                        <option value="kamyon">kamyon</option>
-                                                        <option value="elektrikli bisiklet">elektrikli bisiklet</option>
-                                                        <option value="ambulans">ambulans</option>
-                                                        <option value="Diğer, belirtiniz">Diğer, belirtiniz</option>
-                                                        
-                                                      </optgroup>
-                                                    
-                                                    <optgroup label="Diğer Mekanik">
-                                                        <option value="Diğer, belirtiniz">Diğer, belirtiniz</option>
-                                                      </optgroup>
-                                                    
-                                                    <optgroup label="Sosyal">
-                                                        <option value="sorun">sorun</option>
-                                                        <option value="çözüm">çözüm</option>
-                                                        <option value="talep">talep</option>
-                                                        <option value="anı">anı</option>
-                                                        <option value="görüşme">görüşme</option>
-                                                        <option value="olay">olay</option>
-                                                        <option value="hayal">hayal</option>
-                                                        <option value="duygu">duygu</option>
-                                                        <option value="diller">diller</option>
-                                                        <option value="dinler">dinler</option>
-                                                        
-                                                        <option value="kültürler">kültürler</option>
-                                                        <option value="Diğer, belirtiniz">Diğer, belirtiniz</option>
-                                                        
-                                                      </optgroup>
-                                                    
-												</select>
-                                                </div>
-												Kayıt Kategorileri 
-                                                
-                                                <br><button id="addnewcategory" type="button">add new category</button>
-											</div>
-										</div>
-                                        
-                                        
-                                        
-										<div class="row">
-											<div class="12u">
-												<input type="text" name="free_tags" id="free_tags" />
-                                                Eklemek istediğiniz İçerik Etiketleri
-											</div>
-										</div>
-										<div class="row">
-											<div class="12u">
-												<input type="text" name="subject" id="subject" placeholder="Temsili sesler [vaktiyle o noktada olan bir şeyi temsil etmek için eklenen sesler (nesli tükenmiş bir tür, taş ocakları patlama sesleri); başka kaynaklardan aktarılan ilgili sesler, sanatsal yöntemlerle oluşturulan sesler, yayımlanmış haber sesleri gibi]" />
-											</div>
-										</div>
-										<div class="row">
-											<div class="12u">
-												<input type="file" name="ses" id="file" placeholder="Ses Dosyanız" accept="audio/*" /><br>
-                                                <br>
-                                                <input type="checkbox" name="license_terms" value="license_terms" required> Alıntı-LisansDevam CC BY-SA lisansını kabul ediyorum
-											</div>
-										</div>
-										<div class="row">
-											<div class="12u">
-												<textarea name="message" id="message" placeholder="Bize Not Bırakın"></textarea>
-											</div>
-										</div>
-										<div class="row 200%">
+										<div class="row 100%">
 											<div class="12u">
 												<ul class="actions">
 													<li><input type="submit" value="GÖNDER" /></li>

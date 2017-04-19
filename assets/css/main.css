@@ -1,4 +1,5 @@
 @import url("http://fonts.googleapis.com/css?family=Open+Sans:300,300italic,600,600italic,700");
+@import url("http://fonts.googleapis.com/css?family=Lora");
 @import url("font-awesome.min.css");
 
 /*
@@ -1069,7 +1070,8 @@
 /* Basic */
 
 	body, input, textarea, select {
-		font-family: Book Antiqua,Palatino,Palatino Linotype,Palatino LT STD,Georgia,serif;
+		/*font-family: Book Antiqua,Palatino,Palatino Linotype,Palatino LT STD,Georgia,serif;*/
+		font-family: 'Lora', serif;
 		line-height: 1.85em;
 		color: #888;
 		font-weight: 300;
@@ -1213,7 +1215,7 @@
 		}
 
 	form textarea {
-		height: 15em;
+		/*height: 15em;*/
 	}
 
 	form .formerize-placeholder {
@@ -1772,7 +1774,8 @@
 			form input[type="reset"],
 			form button,
 			form .button {
-				margin: 0 0.5em 0 0.5em;
+				/*margin: 0 0.5em 0 0.5em;*/
+				margin: 0 0.2em 0 0.2em;
 			}
 
 		/* Button */
@@ -1782,8 +1785,12 @@
 			input[type="reset"],
 			button,
 			.button {
+				/*
 				padding: 1em 2.35em 1em 2.35em;
 				font-size: 1.1em;
+				*/
+				padding: 1em 2.35em 1em 2.35em;
+				font-size: 0.8em;
 			}
 
 				input[type="button"].big,
